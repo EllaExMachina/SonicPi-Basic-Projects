@@ -1,0 +1,7 @@
+#creates a polyrthythm using bools. Bools introduced in v2.2 of sonic pi. 
+
+live_loop :poly do; tick
+  sample :drum_bass_hard if bools(1,0,0).look
+  sample :elec_beep if bools(1,0,0,0).look
+  sleep 0.5
+end
