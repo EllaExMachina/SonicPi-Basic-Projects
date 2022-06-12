@@ -1,0 +1,13 @@
+#Two loops playing the Phrygian scale go out of sync and then fall back into sync.
+
+use_synth :prophet
+notes = (ring :C4, :Db4, :Eb4, :F5, :G5, :Ab4, :Bb4, :C5)
+live_loop :slow do
+  play notes.tick, release: 0.1
+  sleep 0.4
+end
+
+live_loop :faster do
+  play notes.tick, release: 0.1
+  sleep 0.39
+end
